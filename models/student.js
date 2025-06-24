@@ -22,4 +22,5 @@ const studentSchema = new mongoose.Schema({
   }
 });
 
+studentSchema.index({grades:-1})
 export default mongoose.model("Student", studentSchema, "students");

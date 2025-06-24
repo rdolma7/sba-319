@@ -1,24 +1,23 @@
-// import { Timestamp } from "bson";
-// import { timeStamp } from "console";
+
 import mongoose from "mongoose";
 
 const adminSchema = new mongoose.Schema(
   {
     name: {
-      type: "string",
-      required: true,
+      type: String,
+      required: false
     },
     email: {
-      type: "string",
-      required: true,
-      unique: true,
+      type: String,
+      required:false
     },
     position: {
-      type: "string",
-      required: true,
+      type: String,
+      required: true
     },
     location: {
-        type: "string"
+        type: String,
+        required: false
     }
   });
 

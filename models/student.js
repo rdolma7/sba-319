@@ -2,24 +2,24 @@ import mongoose from "mongoose";
 
 const studentSchema = new mongoose.Schema({
   username: {
-    type: "string",
-    required: "true",
-    unique: "true",
+    type: String,
+    required: true,
+    unique: true,
   },
   email: {
-    type: "string",
-    required: "true",
-    unique: "true",
+    type: String,
+    required: true,
+    unique: true,
   },
   password: {
-    type: "string",
-    required: "true",
+    type: String,
+    required: false,
     minLength: 10,
   },
-  createdAt: {
-    type: "Date",
-    default: Date.now,
-  },
+  grades:{
+    type: Number,
+    required: true
+  }
 });
 
 export default mongoose.model("Student", studentSchema, "students");

@@ -1,25 +1,25 @@
+// import { Timestamp } from "bson";
+// import { timeStamp } from "console";
 import mongoose from "mongoose";
 
-const adminSchema = new mongoose.Schema({
-  username: {
-    type: "string",
-    required: "true",
-    unique: "true",
-  },
-  email: {
-    type: "string",
-    required: "true",
-    unique: "true",
-  },
-  password: {
-    type: "string",
-    required: "true",
-    minLength: 10,
-  },
-  createdAt: {
-    type: "Date",
-    default: Date.now,
-  },
-});
+const adminSchema = new mongoose.Schema(
+  {
+    name: {
+      type: "string",
+      required: true,
+    },
+    email: {
+      type: "string",
+      required: true,
+      unique: true,
+    },
+    position: {
+      type: "string",
+      required: true,
+    },
+    location: {
+        type: "string"
+    }
+  });
 
 export default mongoose.model("Admin", adminSchema, "admins");

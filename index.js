@@ -51,6 +51,18 @@ if(!student){
   }
 });
 
+app.delete("/students/:id", async(req,res)=>{
+  try{
+    const {id} = req.params;
+    const student = await Student.findByIdAndDelete(id);
+    if(!student){
+return res.status(404).json({message:`Student ${id} not found`});
+    }
+  }catch(err){
+    res.status(500).json({error:err.message});
+  }
+})
+
 app.listen(port, () => {
   console.log(`Server is running on port  ${port}`);
 });

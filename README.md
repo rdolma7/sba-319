@@ -1,6 +1,12 @@
 For this SBA, I'm trying to implement a database for Masterful Learning Center with tutor, admins and student information. 
-This README must include a description of your API's available routes and their corresponding CRUD operations for reference.
-For get routes: "./"
-For delete routes:
-For Update/Patch/Put routes:
-For Post routes
+
+
+Get and Post route: This route will create students, admins or tutors based on the respective endpoint you choose. 
+students: "./students" 
+admins: "./admins"
+tutors: "./tutors"s
+
+Put and delete route: This route will update and delete the records for either of the 3 collections from the respective endpoint you choose. 
+students: "/students/:id" 
+admins: "./admins/:id"
+tutors: "./tutors/:id"

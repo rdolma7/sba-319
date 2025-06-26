@@ -1,4 +1,4 @@
-For this SBA, I'm trying to implement a database for Masterful Learning Center with tutor, admins and student information. 
+With this SBA, I tried to implement databases for the 3 collections:admins, students and tutors for Masterful Learning Center. 
 
 Collections and Routes
 Students (/students)
